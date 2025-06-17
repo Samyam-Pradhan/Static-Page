@@ -4,8 +4,8 @@ FROM nginx:alpine
 COPY index.html script.js style.css /usr/share/nginx/html/
 
 # Copy SSL cert and key
-COPY nginx-selfsigned.crt /etc/nginx/nginx-selfsigned.crt
-COPY nginx-selfsigned.key /etc/nginx/nginx-selfsigned.key
+COPY nginx-selfsigned.crt /etc/nginx/nginx-certs/nginx-selfsigned.crt
+COPY nginx-selfsigned.key /etc/nginx/nginx-certs/nginx-selfsigned.key
 
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
